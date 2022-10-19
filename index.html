@@ -34,11 +34,69 @@
         Undefined
         Object
         Array = vetor
-        Function*/
+        Function
+        
+        
+        Operadores: Iguais na matemática vem em ordem de atribuição, sendo (), (multiplicação, divisão, exp ), soma e subtração
+        
+        Podemos escrever coisas simples como por exemplo: 
+        var n=3
+        n = n+ 4 = 7 tambem poder ser escrito como n+= 4 -> 7
+        n = n**2 (exponencial)-> 49   n**= 2* -> 49/
+
+
+        Relacionais:
+        5 > 2 = true
+        7 < 4 = false
+        8 >= 8 = true
+        9 <= 7 = false
+        5 == 5 = true (recebe)
+        5 == '5' = true ('5' -> string, o JS reconhece como igual por terem a mesma grandeza)
+        5 === '5' = false  (identidade ou igualdade restrita -> Se os dois são identicos ou mesmo tipo)
+        5 === 5 = true (são identicos)
+        4 != 4 = false (diferente)
+
+
+        Operadores Lógicos:
+        ! -> negação 
+        (! false ou !true apos a !)
+
+        && -> conjunção (Os dois requisitos ou mais precisam ser preenchidos)
+        true && true  -> Ex: Quero uma caneta azul e uma vermelha ao conseguir: true
+        true && false -> Ex: Consegui uma azul e uma verde: false
+        false && true -> Ex: Consegui uma preta e uma vermelha: false
+        false && false-> Ex: Consegui uma preta e uma verde: false
+
+        || -: disjunção (Apenas um dos requisitos precisam ser preenchidos para obter true)
+        true || true  -> Ex: Quero uma caneta azul e uma vermelha ao conseguir: true
+        true || false -> Ex: Consegui uma azul e uma verde: true
+        false || true -> Ex: Consegui uma preta e uma vermelha: true
+        false || false-> Ex: Consegui uma preta e uma verde: false
+
+        Exemplo completo: 
+        var a = 5
+        var b = 8
+        a > b && b % 2 == 0 -> A ordem correta para resolver um  operadores aritimeticos, relacionais e logicos:
+        1º resolver os operadores aritimeticos, relacionais e logicos
+        b % 2 == 0 -> 8 / 2 com resto 0 (true até o momento);
+        a > b -> 5 > 8 (false)
+        Então temos false && true = false (resposta final)
+
+        Caso tenhamos um:
+        
+        "E", "OU" um "não", a ordem de execução é: Não, E, OU por ultimo.
+       
+        Ternário
+        ?
+        :
+        teste ? true : false
+        Ex: média >= 7.0 ? "Aprovado" : "Reprovado" -> Se a resposta do teste for verdadeira ele atribui uma resposta, se for false apresenta o outro valor.
+
+        */
     </script>
 
 </body>
 <footer>
-    Curso de JavaScript desenvolvido por Rone. Atualizado 18-10-22
+    Curso de JavaScript desenvolvido por Rone. 
 </footer>
 </html>

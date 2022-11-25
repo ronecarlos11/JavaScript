@@ -181,3 +181,159 @@ function localizarFibonacci(n) {
 }
 var n = localizarFibonacci(10);
 console.log(n); 
+
+
+
+
+
+
+
+//Criar uma função que retorno um valor booleano informando se o número enviado como parâmetro é um número primo.
+function numeroPrimo(n) {
+ if (n < 2)
+ return false;
+ if (n == 2)
+ return true;
+ var maxDiv = Math.sqrt(n);
+ for (var i = 2; i <= maxDiv; i++) {
+ if (n % i == 0) {
+ return false;
+ }
+ }
+ return true;
+}
+console.log(2, " é um número primo? ", numeroPrimo(2));
+console.log(3, " é um número primo? ", numeroPrimo(3));
+console.log(4, " é um número primo? ", numeroPrimo(4));
+console.log(5, " é um número primo? ", numeroPrimo(5));
+console.log(9, " é um número primo? ", numeroPrimo(9));
+
+
+
+
+
+
+//Crie uma função que calcule a raiz quadrada de um número e retorne um número inteiro como resultado
+function raiz_quadrada_para_inteiro(num) {
+ return parseInt(Math.sqrt(num)+"");
+}
+console.log(raiz_quadrada_para_inteiro(17)); 
+
+
+
+
+                //Extremamente importante
+//Retornar a maior string de um array
+function maiorString(arr) {
+ var maior = '';
+ for (var i = 0; i < arr.length; i++) {
+ if (arr[i].length > maior.length) {
+ maior = arr[i];
+ }
+ }
+ return maior;
+}
+console.log(maiorString(['Sao Paulo', 'Rio de Janeiro', 'Amazonas', 'Pernambuco', 'Santa Catarina', 'Rio Grande do Norte', 'Sergipe']));
+
+
+
+
+
+
+
+//Criar uma função que junte dois arrays e retorno o resultado como um novo array
+function juntarArrays(ar1, ar2) {
+ var ar = [];
+ for (let el of ar1) {
+ ar.push(el);
+ }
+ for (let el of ar2) {
+ ar.push(el);
+ }
+ return ar;
+}
+var ar1 = [1, 2, 3];
+var ar2 = [4, 5, 6];
+var ar = juntarArrays(ar1, ar2);
+console.log(ar);
+
+
+
+
+
+//Implemente o algoritmo "bubble sort" para um array de números
+function bubbleSort(ar) {
+    var shouldSort = true;
+    var length = ar.length;
+    while(shouldSort) {
+    shouldSort = false;
+    length--;
+    for (var i = 0; i < length; i++) {
+    var a = ar[i];
+    if ( a > ar[i+1] ) {
+    ar[i] = ar[i+1];
+    ar[i+1] = a;
+    shouldSort = true;
+    }
+    }
+    }
+   }
+   var ar = [23, 1000, 1, -1, 8, 3];
+   console.log(ar);
+   bubbleSort(ar);
+   console.log(ar); 
+
+   
+
+
+
+
+
+//Contar a quantidade de palavras em um texto
+function contarPalavras(text) {
+    var existe_separador = true;
+    var palavras = 0;
+    for (var c of text) {
+    if (separador (c)) {
+    existe_separador = true;
+    continue;
+    }
+    if (existe_separador) {
+    palavras ++;
+    existe_separador = false;
+    }
+    }
+    return palavras;
+   }
+   function separador(c) {
+    var separadores = [" ", "\t", "\n", "\r", ",", ";", ".", "!", "?"];
+    return separadores.includes(c);
+   }
+   console.log(contarPalavras (""));
+   console.log(contarPalavras (" "));
+   console.log(contarPalavras ("SQL Server!! "));
+   console.log(contarPalavras (" React Native PHP ASP"));
+   console.log(contarPalavras (" O PHP existe a mais de 26 anos "));
+   console.log(contarPalavras ("Vamos estudar bancos de dados relacionais"));
+
+
+
+
+
+
+
+
+//Criar uma função para inverter um array
+function inverterArray(ar){
+    var ar2 = [];
+    for(var i = ar.length - 1; i >= 0; i--) {
+    ar2.push(ar[i]);
+    }
+    return ar2;
+   }
+   var ar = [1, 2, 3];
+   var ar2 = inverterArray(ar);
+   console.log(ar2); 
+
+
+

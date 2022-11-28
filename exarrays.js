@@ -1,3 +1,38 @@
+//A propriedade length de um Array retorna o comprimento de um Array (o número de elementos do Array).
+var frutas = ["Banana", "Laranja", "Maça", "Manga"];
+frutas.length;                       // o length de frutas é 4
+
+
+//A melhor maneira de percorrer um Array é usando um loop "for":
+var frutas, text, fLen, i;
+frutas = ["Banana", "Laranja", "Maça", "Manga"];
+fLen = frutas.length;
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + frutas[i] + "</li>";
+}
+
+
+
+//A maneira mais fácil de adicionar um novo elemento a um Array é usar o método push:
+var frutas = ["Banana", "Laranja", "Maça", "Manga"];
+frutas.push("Limão");  // acrescenta o novo elemento (limão) às frutas
+
+
+//Novos elementos também podem ser adicionado a um array usando a propriedade length:
+var frutas = ["Banana", "Laranja", "Maça", "Manga"];
+frutas[frutas.length] = "Limão";     // Adiciona o novo elemento (Limão) a frutas
+//A adição de elementos com índices altos pode criar "buracos" indefinidos em um array:
+
+
+
+
+//A Diferença entre Arrays e Objetos
+//Em JavaScript, os arrays usam índices numerados.
+//Em JavaScript, os objetos usam índices nomeados.
+
+
+
 //Imprimir números de 1 a 10
 
 for (var i = 1; i <= 10; i++) {

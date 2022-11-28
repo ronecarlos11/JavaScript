@@ -96,6 +96,11 @@ Como o próprio nome indica, serve para filtrarmos os elementos de um Array. Pas
 
 
 
+
+
+
+
+
         .find()
 Usamos esse método quando queremos encontrar algum elemento dentro no Array. Para isso, passamos uma função que irá retornar true ou false. O primeiro true que for retornado irá finalizar a função e retornar o elemento em que estamos.
     const usersList = [
@@ -114,6 +119,14 @@ Usamos esse método quando queremos encontrar algum elemento dentro no Array. Pa
 
 
 
+
+
+
+
+
+
+
+
         .findIndex()
 Faz o mesmo que o .find(), mas retorna o índice do elemento encontrado ao invés de retornar o próprio elemento.
     const usersList = [
@@ -127,6 +140,11 @@ Faz o mesmo que o .find(), mas retorna o índice do elemento encontrado ao invé
 
     Resultado:
 	2
+
+
+
+
+
 
 
 
@@ -154,6 +172,20 @@ No segundo nós testamos se todos os usuários possuem crédito menor que 500. C
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         .some()
 O .some() faz algo parecido com o .every(). A diferença é que o .every() só retorna true se todos os elementos passarem no teste. O .some() retorna true se pelo menos um elemento do Array passar no teste.        
     const usersList = [
@@ -165,6 +197,23 @@ O .some() faz algo parecido com o .every(). A diferença é que o .every() só r
 
     const result = usersList.some((user, index, array) => user.credit === 300);
 O resultado será true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,6 +249,19 @@ Podemos utilizar em elementos mais complexos:
 
     const orderedUsers = usersList.sort((a, b) => a.credit - b.credit);
 Com isso teremos um novo Array com os usuários ordenados pela quantidade de crédito.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

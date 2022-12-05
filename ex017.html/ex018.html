@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior número</title>
+</head>
+<body>
+    <h1>Um script que leia três números inteiros e mostre o maior deles</h1>
+
+    Primeiro numero:<input id="numero1" type="number"> <br />
+    Segundo  numero:<input id="numero2" type="number"> <br />
+    Terceiro numero: <input id="numero3" type="number"> <br />
+    <button onclick="maior()">Calcular Maior</button>
+ 
+
+    <script type="text/javascript">
+
+        function maior(){
+         var num1 = parseFloat(document.getElementById("numero1").value);
+         var num2 = parseFloat(document.getElementById("numero2").value);
+         var num3 = parseFloat(document.getElementById("numero3").value);
+    
+         var maior = num1;
+    
+         if(num2 > maior)
+          maior = num2;
+         if(num3 > maior)
+          maior = num3;
+    
+         alert("Maior: "+maior);
+        }
+     </script>
+    
+</body>
+</html>
+
+
+
+
+
+<script>
+    /* Agora vamos para a lógica da coisa. Basicamente precisamos fazer uns testes e comparações, para saber o maior número digitado.
+
+Vamos declarar uma variável chama maior.
+Inicialmente, ela recebe o valor do primeiro número:
+maior = num1;
+
+Pronto, inicialmente, o num1 é o maior.
+Agora, vamos comparar esse valor com o num2.
+
+Se num2 for maior que num1, fazemos a variável maior receber num2 (afinal, ele é maior que num1):
+if(num2 > num1)
+   maior = num2;
+Se num2 não for maior, não acontece nada, e a variável maior continua com o valor de num1.
+
+Agora vamos comprar maior com num3. Se num3 for maior que o número armazenado em maior, ele é o maior de todos os números, daí fazemos:
+if(num3 > maior)
+   maior = num3;
+Ao fim do script, simplesmente exibimos o valor que está armazenado em maior em um alert. */
+</script>

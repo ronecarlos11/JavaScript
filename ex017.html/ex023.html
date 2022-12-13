@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos</title>
+</head>
+<body>
+<h1> Multiplo ou não?</h1>
+
+Numero:<input id="num" type="number"> <br />
+Multiplo de:<input id="mult" type="number"> <br />
+    <button onclick="paridade()">Checar</button><br />
+
+Resposta: <div id='resposta' style='display:inline'></div>
+
+    <script type="text/javascript">
+   function paridade(){
+    var num = parseInt(document.getElementById("num").value);
+    var mult = parseInt(document.getElementById("mult").value);
+       var resposta = document.getElementById('resposta');
+        
+          if (num%mult == 0)
+           resposta.innerHTML = num+" é múltiplo de "+mult;
+          else
+           resposta.innerHTML = num+" não é múltiplo de "+mult;
+   }
+    </script>
+</body>
+</html>

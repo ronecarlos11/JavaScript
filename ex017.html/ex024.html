@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+</head>
+<body>
+    <h1>Variáveis Trocando de Valor</h1>
+
+    Primeira numero:<input id="numero1" type="number"> <br />
+   Segundo  numero:<input id="numero2" type="number"> <br />
+   <button onclick="inverte()">Inverter</button>
+
+   <script type="text/javascript">
+
+    function inverte(){
+     var num1 = parseFloat(document.getElementById("numero1").value);
+     var num2 = parseFloat(document.getElementById("numero2").value);
+
+     var aux = num1;
+
+     num1=num2;
+     num2=aux;
+
+     alert("Antes:\n"+
+        "numero1="+document.getElementById("numero1").value+"\n"+
+        "numero2="+document.getElementById("numero2").value+"\n\n"+
+        "Invertido:\n"+
+        "numero1="+num1+"\n"+
+        "numero2="+num2+"\n\n");
+    }
+ </script>
+
+
+<script>
+//Primeiro, definimos dois formulário de input, via HTML, para o usuário digitar os números.
+//Depois, um botão chamado Inverter. Ao ser clicado (onclick), ele vai acionar a função inverte(), do JS.
+//Vamos armazenar os valores digitados nos campos de input em duas variáveis chamadas de num1 e num2. Como vem no formato de string, passamos para float usando a função parseFloat.
+//Agora vamos lá, inverter os valores.
+//Queremos que o que está dentro de num1 vá para num2, e vice-versa.
+//Vamos lá, fazer num1 receber o valor de num2:
+//num1 = num2;
+//Prontinho, bem simples. Agora o contrário:
+//num2 = num1;
+//Quando num1 recebeu num2, o valor antigo que tava em num1 sumiu!
+//A solução é usando uma outra variável, chamada de auxiliar.
+//Essa variável armazena o valor de num1 antes dele mudar:
+//var aux = num1;
+//Aí sim fazemos:
+//num1 = num2;
+//E agora, para colocar o valor antigo de num1 em num2? Usamos a variável auxiliar!
+//num2 = aux;
+
+</script>
+</body>
+</html>

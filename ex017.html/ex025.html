@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo ou negativo</title>
+</head>
+<body>
+    <h1>Verifique se é positivo ou negativo</h1>
+
+    Digite um numero: <input id="numero" type="number"> 
+   <button onclick="teste()">Testar</button>
+
+   <script type="text/javascript">
+    function teste(){
+     var num = parseFloat(document.getElementById("numero").value);
+     
+     if (num > 0)
+      alert(num + " eh Positivo");
+     else
+      if(num < 0)
+       alert(num + " eh Negativo");
+      else
+       alert("Nem positivo nem negativo, nulo");
+    }
+ </script>
+
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<script>
+    //Primeiro, vamos cuidar do HTML. Vamos usar um formulário de input do tipo numérico (number):
+//Digite um numero: <input id="numero" type="number"> 
+//Agora, o nosso botão, que ao ser clicado vai chamar a função teste() do JavaScript:
+//<button onclick="teste()">Testar</button>
+//Prontinho, agora vamos para a programação JS em si.
+
+//Vamos criar a função teste(), que vai ser acionada ao clicarem o botão.
+//A primeira coisa que ela vai fazer é pegar o valor digitado no formulário de input, o trecho do código que faz isso é:
+//document.getElementById("numero").value
+
+//Ele vai pegar a string, pois como estudamos, tudo digitado dentro do input é uma string.
+//Agora vamos pegar essa string e jogar dentro da função parseFloat() (Como converter string para float), e por fim, pegar esse float e armazenar na variável num.
+
+//Tudo isso é feito apenas com essa linha de código:
+//var num = parseFloat(document.getElementById("numero").value);
+
+//Poderia ser assim, por exemplo
+//var num;
+//num = document.getElementById("numero").value;
+//num = parseFloat(num);
+
+//Mas condensamos numa linha só, como mostrado anteriormente.
+//Agora vem toda a lógica do IF e ELSE.
+
+//Já temos o número digitado pelo usuário armazenado na variável num. Vamos testar ela.
+//Primeiro, usamos o comando IF para saber se ela é maior 0, se for, o número é positivo e acaba aí:
+//if (num > 0)
+//Se não for, vai pro ELSE. Ora, se não for maior que zero, é porque é menor que zero, logo é negativo, correto?
+
+//Errado! Ué, pode ser que seja igual a 0. Ou seja, nem maior nem menor que 0!
+//E agora, José?
+
+//Agora vamos colocar outro teste condicional dentro do ELSE.
+//Vamos aninhar um IF pra saber se o número é menor que 0. Se for, diz que é negativo:
+
+//E se não for? Aí cai no ELSE aninhado, par desse IF aninhado. Se cair nesse segundo else é porque não é maior, nem menor que zero...ou seja, é zero! Dizemos que é nulo!
+
+//if(num < 0)
+</script>

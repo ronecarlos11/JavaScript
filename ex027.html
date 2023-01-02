@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de datas</title>
+</head>
+<body>
+    <h1>Verifique sua data de nascimento</h1>
+    <script type="text/javascript" src="script.js"></script>
+       Digite sua data de nascimento: <br />
+       Dia:<input id="dia" type="number"> <br />
+       Mês:<input id="mes" type="number"> <br />
+       Ano:<input id="ano" type="number"> <br />
+    <button onclick="validar()">Validar</button><br />
+</body>
+</html>
+
+
+
+<script>
+//Datas válidas
+//Uma das coisas mais comuns que você vai fazer como programador JavaScript, é pedir datas ao usuários, como por exemplo, a data de nascimento.
+//Mas tem um problema: nunca duvide da capacidade do seu usuário.
+//Certamente alguns vão fornecer dia no lugar do mês, vão digitar 04 ao invés de 2004 e outras bizarrices.
+
+//Por isso, é sempre importante verificar se aquela data que ele forneceu está correta.
+//O nome disse é validação de data.
+
+//O grande segredo para validar uma data é atentar para o mês.
+//Os seguintes meses possuem:
+//31 dias: 1, 3, 5, 7, 8, 10 e mês 12
+//30 dias: 4, 6, 9 e mês 11
+//29 dias: mês 2 em anos bissextos
+//28 dias:  mês 2 em anos não bissextos   
+
+//Primeiro, pedimos o dia, mês e ano ao usuário, através de formulário HTML.
+//Quando o usuário clicar no botão "Validar", a página invoca a função "validar()" do JavaScript.
+
+//O que vamos fazer nessa função é tratar o mês, e para isso vamos usar o switch em JS.
+//Vamos usar cases acumulativos.
+
+//Primeiro, vem os case de valores 1,3, 5, 7, 8, 10 e 12. Se cair neles, é porque os meses podem ter no máximo 31 dias. Acima disso, está errado.
+
+//Depois vem os cases 4, 6, 9 e 11. Se cair neles, os dias podem ter no máximo o valor 30, de 30 dias. Acima disso (como 31), é erro.
+
+
+//Se cair no case 2, precisamos fazer um teste condicional para saber se o ano é bissexto ou não. Se for bissexto, os dias podem ser no máximo 29 dias, acima disso está errado.
+//Se não for bissexto, os dias podem ser no máximo 28, acima disso está errado.
+</script>

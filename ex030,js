@@ -47,3 +47,18 @@ function carregar(){
         relogio.innerHTML = `${hora} : ${min} : ${seg} ${pe}`
     }, 1);
 }
+
+
+
+
+// Para simplificar o código, pois existem formatos prontos que você pode usar com toLocaleDateString e toLocaleTimeString:
+//function carregar(){
+//    let data = new Date();
+//    let dw = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+//    document.getElementById('dias').innerHTML = `${dw[data.getDay()]} ${data.toLocaleDateString("pt-BR")}`;
+//    document.getElementById('relogio').innerHTML = `${data.toLocaleTimeString("en-US")}`;
+//}
+
+//document.addEventListener('DOMContentLoaded', function() { setInterval(carregar, 1000) });
+//<p id="dias"></p>
+//<p id="relogio"></p>
